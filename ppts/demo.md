@@ -54,10 +54,10 @@ hightStyle: 代码高亮样式，默认monokai_sublime
 
 
 
-[slide style="background-image:url('/img/bg1.png')"]
+[slide style="background-image:url('img/bg1.png')"]
 
 # 支持单页添加背景图片 {:&.flexbox.vleft}
-## 使用方法：&#91;slide style="background-image:url('/img/bg1.png')"&#93;
+## 使用方法：&#91;slide style="background-image:url('img/bg1.png')"&#93;
 
 [slide]
 ## 支持.class/#id/自定义属性样式
@@ -300,7 +300,8 @@ nodeppt：https://github.com/ksky521/nodePPT
 ## 图片，点击全屏
 ----
 
-![小萝莉](/girl.jpg "小萝莉")
+
+![小萝莉](/img/girl.jpg "小萝莉")
 
 
 [slide]
