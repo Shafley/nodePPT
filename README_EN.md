@@ -4,6 +4,7 @@ nodePPT - This is probably the best web presentation tool so far!
 
 [![NPM](https://nodei.co/npm-dl/nodeppt.png)](https://nodei.co/npm/nodeppt/)
 [![NPM](https://nodei.co/npm/nodeppt.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/nodeppt/)
+[![Inline docs](http://inch-ci.org/github/ksky521/nodePPT.svg?branch=master)](http://inch-ci.org/github/ksky521/nodePPT)
 
 ## why nodePPT?
 
@@ -180,7 +181,7 @@ if you want set single page animation, go to **[single page animation setting](#
 ----
 nodeppt is a ppt webapp coded by nodejs
 nodeppt: https://github.com/ksky521/nodePPT
-
+```
 #### code formatting
 the same as **Github Flavored Markdown**
 
@@ -202,7 +203,6 @@ For example:
     <p>this is html</p>
 </div>
 <p id="css-demo">css style</p>
-<p>for more details, visit ppts/demo.md</p>
 <script>
     function testScriptTag(){
 
@@ -234,7 +234,7 @@ suck like this:
 :-------|:------:|-------:|--------
 environment |js/nodejs | Ruby | nodejs
 .ext | .less | .sass/.scss | .styl
-
+```
 
 #### insert iframe
 use ```data-src``` as the url of the iframe, the iframe will not load the content untill the page be displayed.
@@ -244,41 +244,6 @@ use ```data-src``` as the url of the iframe, the iframe will not load the conten
 
 #### example
 for more go to ppts/demo.md
-```markdown
-title: nodeppt markdown presentation
-speaker: Theo Wang
-url: https://github.com/ksky521/nodePPT
-transition: zoomin
-
-[slide]
-
-# cover style
-## h1 for cover, h2 for others
-
-[slide style="background-image:url('/img/bg1.png')"]
-
-# background iamge {:&.flexbox.vleft}
-## &#91;slide style="background-image:url('/img/bg1.png')"&#93;
-
-[slide]
-
-## home page style
-### ---- boundary
-----
-
-nodeppt is a ppt webapp coded by nodejs
-
-nodeppt: https://github.com/ksky521/nodePPT
-
-
-[slide]
-
-what? want more features?
-
-geek mode: check the source code, find nodeppt.js, and you'll find the awesome "shake to page-flipping".
-
-check the project directory for more infomation
-```
 
 To see more demo, check the ```ppts``` folder
 
