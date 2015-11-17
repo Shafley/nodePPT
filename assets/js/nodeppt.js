@@ -1,4 +1,4 @@
-(function ($win, $doc, $B, loadJS, loadCSS, undefined) {
+(function($win, $doc, $B, loadJS, loadCSS, undefined) {
     //用于单页ppt预加载资源
     var preloadFn = {
         loadJS: loadJS,
@@ -6,7 +6,7 @@
     };
 
     var $body = $doc.body;
-    var emptyFn = function () {};
+    var emptyFn = function() {};
     var emptyArr = [];
 
     var touchDX = 0; //touch事件x数据
@@ -28,6 +28,7 @@
     var $drawBoard; //画板
     var $slideTip;
     var slideCount; //幻灯片总页数-1
+    var slideJump = ''; //幻灯片跳转
     var QUERY = queryToJson(location.search);
 
     function queryToJson(url) {
@@ -38,7 +39,7 @@
             pairs = search.split('&'),
             result = {};
 
-        pairs.forEach(function (pair) {
+        pairs.forEach(function(pair) {
             pair = pair.split('=');
             if (pair[0].length > 0) {
                 result[pair[0]] = pair[1] || '';
@@ -73,7 +74,13 @@
         return $doc.getElementById(id);
     }
 
+    function cprevSlide() {
+        prevSlide();
+    }
 
+    function cnextSlide() {
+        nextSlide();
+    }
     //上一页
     function prevSlide(isControl) {
         if (buildPrevItem()) {
@@ -123,7 +130,7 @@
         //检测iframe
         var $iframe = toArray($('iframe[data-src]', $cur));
         if ($iframe.length) {
-            $iframe.forEach(function (v) {
+            $iframe.forEach(function(v) {
                 var src = v.dataset.src;
                 v.src = src;
             });
@@ -142,7 +149,7 @@
         if (slideOutTimer) {
             clearTimeout(slideOutTimer);
         }
-        slideOutTimer = setTimeout(function () {
+        slideOutTimer = setTimeout(function() {
             slideOutCallBack_(prev);
         }, 1500);
     }
@@ -166,8 +173,8 @@
                     type = dataset.type,
                     url = dataset.url;
                 var fn = preloadFn['load' + type.toUpperCase()];
-                typeof fn === 'function' && fn(url, function (tmpNode) {
-                    return function () {
+                typeof fn === 'function' && fn(url, function(tmpNode) {
+                    return function() {
                         //将该标签删除，释放内存
                         tmpNode.parentNode && tmpNode.parentNode.removeChild(tmpNode);
                         tmpNode = null;
@@ -213,7 +220,7 @@
         list.remove('tobuild');
 
         if (list.contains('subSlide')) {
-            toArray($('.subSlide.builded', $curSlide)).forEach(function ($item) {
+            toArray($('.subSlide.builded', $curSlide)).forEach(function($item) {
                 $item.classList.add('subBuilded');
             });
         }
@@ -287,13 +294,12 @@
 
             var $items = toArray($(buildClass, slide));
             var dataset = slide.dataset;
-            $items.forEach(function ($v, i) {
+            $items.forEach(function($v, i) {
                 $v.classList.add('tobuild');
                 if (!('index' in $v.dataset)) {
                     $v.dataset.index = i;
                 }
             });
-
 
             if (!dataset.transition) {
                 dataset.transition = transition;
@@ -405,7 +411,7 @@
         }
 
         var arr = ['next', 'past', 'far-next', 'far-past', 'current', 'pagedown', 'pageup'];
-        arr.forEach(function (v) {
+        arr.forEach(function(v) {
             if (className !== v && pageClass !== v) {
                 el.classList.remove(v);
             }
@@ -420,7 +426,7 @@
         }
         $slideTip.innerHTML = msg;
         $slideTip.style.display = 'block';
-        setTimeout(function () {
+        setTimeout(function() {
             $slideTip.style.display = 'none';
         }, 3E3);
     }
@@ -429,6 +435,15 @@
     /*************************events***************/
 
     //pc键盘翻页事件逻辑
+    function evtkeydown(e) {
+        try {
+            e.preventDefault(); //j防止按键盘后，页面走位
+        } catch (err) {
+            console.log(err);
+        }
+        return false;
+    }
+
     function evtDocUp(e) {
         var key = e.keyCode;
         var target = e.target;
@@ -438,13 +453,28 @@
         }
         if (!e.isFromControl) {
             switch (key) {
-                case 13:
-                case 72:
-                case 87:
-                case 79:
-                case 78:
-                case 80:
-                case 67:
+                case 13: //Enter
+                case 72: //h
+                case 87: //w
+                case 79: //O
+                case 78: //N
+                case 80: //P
+                case 67: //C
+                case 66: //b lue
+                case 89: //y ellow
+                case 82: //r ed
+                case 71: //g reen
+                case 77: //m agenta
+                case 48: //0
+                case 49:
+                case 50:
+                case 51:
+                case 52:
+                case 53:
+                case 54:
+                case 55:
+                case 56:
+                case 57: //9
                     $B.fire('slide event keyup', e);
                     break;
             }
@@ -454,13 +484,19 @@
                 // Enter
                 if ($doc.body.classList.contains('overview')) {
                     overview(e.isFromControl);
+                } else {
+                    //j  幻灯片跳转
+                    var slideJumpIndex = parseInt(slideJump) - 1;
+                    if (slideJumpIndex >= 0 && slideJumpIndex <= slideCount) {
+                        jumpSlide(slideJumpIndex);
+                    }
                 }
-
+                slideJump = '';
                 break;
             case 72:
                 // H: Toggle code highlighting
                 $doc.body.classList.toggle('highlight-code');
-                setTimeout(function () {
+                setTimeout(function() {
                     $doc.body.classList.toggle('highlight-code');
                 }, 2000);
                 break;
@@ -488,6 +524,82 @@
                 if (!$body.classList.contains('popup')) {
                     showPaint(e.isFromControl);
                 }
+                break;
+            case 66:
+                //b
+                if ($drawBoard.context) {
+                    $drawBoard.context.strokeStyle = 'rgba(0,0,255,0.5)'; //j pen_blue
+                    break;
+                }
+            case 89:
+                //y
+                if ($drawBoard.context) {
+                    $drawBoard.context.strokeStyle = 'rgba(255,255,0,0.5)'; //pen_yellow
+                    break;
+                }
+            case 82:
+                //r
+                if ($drawBoard.context) {
+                    $drawBoard.context.strokeStyle = 'rgba(255,0,0,0.5)'; //pen_red
+                    break;
+                }
+            case 71:
+                //g
+                if ($drawBoard.context) {
+                    $drawBoard.context.strokeStyle = 'rgba(0,255,0,0.5)'; //pen_green
+                    break;
+                }
+            case 77:
+                //m
+                if ($drawBoard.context) {
+                    $drawBoard.context.strokeStyle = 'rgba(255,0,255,0.5)'; //pen_magenta
+                    break;
+                }
+            case 49:
+                //1
+                slideJump = slideJump + '1';
+                if ($drawBoard.context) {
+                    $drawBoard.context.lineWidth = 3;
+                }
+                break;
+            case 50:
+                //2
+                slideJump = slideJump + '2';
+                if ($drawBoard.context) {
+                    $drawBoard.context.lineWidth = 7;
+                }
+                break;
+            case 51:
+                //3
+                slideJump = slideJump + '3';
+                if ($drawBoard.context) {
+                    $drawBoard.context.lineWidth = 11;
+                }
+                break;
+            case 52:
+                //4
+                slideJump = slideJump + '4';
+                if ($drawBoard.context) {
+                    $drawBoard.context.lineWidth = 15; //j 笔粗细
+                }
+                break;
+            case 48:
+                slideJump = slideJump + '0';
+                break;
+            case 53:
+                slideJump = slideJump + '5';
+                break;
+            case 54:
+                slideJump = slideJump + '6';
+                break;
+            case 55:
+                slideJump = slideJump + '7';
+                break;
+            case 56:
+                slideJump = slideJump + '8';
+                break;
+            case 57:
+                slideJump = slideJump + '9'; //j 幻灯片跳转
                 break;
             case 67:
                 //c
@@ -519,9 +631,7 @@
                 break;
         }
 
-        //        $container.style.marginLeft = -(curIndex * slideWidth) + 'px';
-        //        setProgress();
-        //        setHistory();
+
     }
 
     /******************************** Touch events *********************/
@@ -550,8 +660,11 @@
             touchDX = touch.pageX - touchStartX;
             touchDY = touch.pageY - touchStartY;
         }
-        event.preventDefault();
-
+        try {
+            event.preventDefault();
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     //touchend事件
@@ -578,10 +691,12 @@
     //绑定事件
     function bindEvent() {
         $doc.addEventListener('keyup', evtDocUp, false);
+        // $doc.addEventListener('keydown', evtkeydown, false); //j 防止页面走位
+        // $doc.addEventListener('keypress', evtkeydown, false); //j 防止页面走位
         $body.addEventListener('touchstart', evtTouchStart, false);
-        $$('_btn-bar').addEventListener('click', function () {
+        $$('_btn-bar').addEventListener('click', function() {
             var isOpen = false;
-            return function () {
+            return function() {
                 if (!isOpen) {
                     this.classList.remove('fa-bars');
                     this.classList.add('fa-close');
@@ -595,11 +710,11 @@
                 isOpen = !isOpen;
             };
         }(), false);
-        $$('_btn-prev').addEventListener('click', prevSlide, false);
-        $$('_btn-next').addEventListener('click', nextSlide, false);
-        $$('_btn-overview').addEventListener('click', function () {
+        $$('_btn-prev').addEventListener('click', cprevSlide, false);
+        $$('_btn-next').addEventListener('click', cnextSlide, false);
+        $$('_btn-overview').addEventListener('click', function() {
             var isOpen = false;
-            return function () {
+            return function() {
 
                 if (isOpen) {
                     this.classList.add('fa-compress');
@@ -613,9 +728,9 @@
                 isOpen = !isOpen;
             };
         }(), false);
-        $$('_btn-brush').addEventListener('click', function () {
+        $$('_btn-brush').addEventListener('click', function() {
             var isOpen = false;
-            return function () {
+            return function() {
                 if (isOpen) {
                     this.classList.add('fa-paint-brush');
                     this.classList.remove('fa-eraser');
@@ -629,7 +744,7 @@
             }
         }(), false);
 
-        $win.addEventListener('hashchange', function () {
+        $win.addEventListener('hashchange', function() {
             if (location.hash && !lockSlide) {
                 doHash = false;
                 slideOutCallBack($slides[curIndex]);
@@ -651,8 +766,9 @@
         $drawBoard.context = $drawBoard.getContext('2d');
         var context = $drawBoard.context;
         context.lineWidth = 3;
-        context.lineCap = 'round';
-        context.strokeStyle = "red";
+        // context.lineCap = 'square'; //'round';
+        context.lineJoin = 'round'; //'bevel';
+        context.strokeStyle = 'rgba(255,0,0,0.5)'; //"red";
     }
 
     //显示画板
@@ -706,8 +822,9 @@
     }
 
     //删除画板
-    var removePaint = function (isFromControl) {
+    var removePaint = function(isFromControl) {
         clearPaint();
+        slideJump = ''; //j 幻灯片跳转
         if (isControl) {
             $body.classList.add('with-notes');
             $body.classList.add('popup');
@@ -728,8 +845,12 @@
             $B.fire('remove paint');
         }
     };
-    var pMouseDown = function (e) {
+    var pMouseDown = function(e) {
         $drawBoard.isMouseDown = true;
+        try { //j 触屏画笔
+            var touch = e.targetTouches[0];
+            e = touch;
+        } catch (err) {}
         //        $drawBoard.iLastX = e.clientX - $drawBoard.offsetLeft + ($win.pageXOffset || $doc.body.scrollLeft || $doc.documentElement.scrollLeft);
         //        $drawBoard.iLastY = e.clientY - $drawBoard.offsetTop + ($win.pageYOffset || $doc.body.scrollTop || $doc.documentElement.scrollTop);
         var x = $drawBoard.iLastX = e.layerX || e.offsetX || (e.clientX - $drawBoard.offsetLeft + ($win.pageXOffset || $doc.body.scrollLeft || $doc.documentElement.scrollLeft));
@@ -738,9 +859,10 @@
             x: x,
             y: y
         });
+        return false; //j 触屏画笔
     };
     var pPoints = [];
-    var pMouseUp = function (e) {
+    var pMouseUp = function(e) {
         $drawBoard.isMouseDown = false;
         $drawBoard.iLastX = -1;
         $drawBoard.iLastY = -1;
@@ -749,7 +871,7 @@
         }
         pPoints.length = 0;
     };
-    $B.on('from control paint points', function (data) {
+    $B.on('from control paint points', function(data) {
         // console.log(data);
         var points = data.points;
         //远程来的屏幕
@@ -776,8 +898,15 @@
         }
         context.stroke();
     });
-    var pMouseMove = function (e) {
+    var pMouseMove = function(e) {
+        var ee = e;
         if ($drawBoard.isMouseDown) {
+            try { //j 触屏画笔
+                var touch = e.targetTouches[0];
+                e = touch;
+            } catch (err) {
+                console.log(err);
+            }
             //            var iX = e.clientX - $drawBoard.offsetLeft + ($win.pageXOffset || $doc.body.scrollLeft || $doc.documentElement.scrollLeft);
             //            var iY = e.clientY - $drawBoard.offsetTop + ($win.pageYOffset || $doc.body.scrollTop || $doc.documentElement.scrollTop);
             var iX = e.layerX || e.offsetX || (e.clientX - $drawBoard.offsetLeft + ($win.pageXOffset || $doc.body.scrollLeft || $doc.documentElement.scrollLeft));
@@ -793,7 +922,12 @@
                 x: iX,
                 y: iY
             });
-            e.preventDefault();
+            try {
+                ee.preventDefault();
+            } catch (err) {
+                console.log(err);
+            }
+            return false; //j 触屏画笔
         }
     }
 
@@ -843,7 +977,7 @@
     }
 
     function fullImg() {
-        loadJS(defaultOptions.dir + 'img.screenfull.js', function () {
+        loadJS(defaultOptions.dir + 'img.screenfull.js', function() {
             //图片处理
             var $imgs = toArray($(defaultOptions.slideClass + ' img', $container));
             screenfull($imgs);
@@ -859,7 +993,7 @@
     //如果是print则需要修改
     function iPrint() {
         if (QUERY && QUERY.print) {
-            toArray($('iframe[data-src]')).forEach(function (v) {
+            toArray($('iframe[data-src]')).forEach(function(v) {
                 if (v.src.indexOf('about:blank') === 0 && v.dataset.src) {
                     v.src = v.dataset.src;
                 }
@@ -877,7 +1011,7 @@
                 defaultOptions[key] = options[key];
             }
         }
-        ['theme', 'transition'].forEach(function (v) {
+        ['theme', 'transition'].forEach(function(v) {
             if (QUERY && QUERY[v]) {
                 defaultOptions[v] = QUERY[v];
             }
@@ -886,7 +1020,7 @@
         Slide.dir = defaultOptions.dir;
         if (defaultOptions.control) {
             var control = defaultOptions.control;
-            loadJS(defaultOptions.dir + 'nodeppt.control.js', function () {
+            loadJS(defaultOptions.dir + 'nodeppt.control.js', function() {
                 Slide.Control.load(control.type, control.args);
             });
         }
@@ -925,14 +1059,30 @@
         buildNextItem: buildNextItem,
         buildPrevItem: buildPrevItem
     };
-    ['on', 'un', 'fire'].forEach(function (v) {
-        Slide[v] = function () {
+    ['on', 'un', 'fire'].forEach(function(v) {
+        Slide[v] = function() {
             var args = toArray(arguments);
             args[0] = 'slide.' + args[0];
             $B[v].apply(null, args);
         }
     });
 
-    $win.Slide = Slide;
+    function getcurIndex() { //j外部控制跳转
+        return curIndex;
+    }
 
+    function jumpSlide(gotoIndex) { //j外部控制跳转
+        pastIndex = curIndex;
+        curIndex = gotoIndex;
+        doSlide();
+    }
+    $win.Slide = Slide;
+    $win.jumpSlide = jumpSlide; //j外部控制跳转
+    $win.getcurIndex = getcurIndex; //j外部控制跳转
+    try {
+        if (window.console && window.console.log) {
+            console.log('Powered By nodePPT, %c https://github.com/ksky521/nodePPT', 'color:red');
+            console.log('Install nodePPT: %c npm install -g nodeppt', 'color:red');
+        }
+    } catch (e) {}
 }(window, document, MixJS.event.broadcast, MixJS.loadJS, MixJS.loadCSS));
