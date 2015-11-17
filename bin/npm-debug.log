@@ -1,0 +1,932 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'E:\\Program Files\\node\\node.exe',
+1 verbose cli   'E:\\Program Files\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'update' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 silly mapToRegistry name colors
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/colors
+8 silly mapToRegistry name commander
+9 silly mapToRegistry using default registry
+10 silly mapToRegistry registry https://registry.npmjs.org/
+11 silly mapToRegistry uri https://registry.npmjs.org/commander
+12 silly mapToRegistry name connect
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/connect
+16 silly mapToRegistry name cookie
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/cookie
+20 silly mapToRegistry name ejs
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/ejs
+24 silly mapToRegistry name ipv4
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/ipv4
+28 silly mapToRegistry name read
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/read
+32 silly mapToRegistry name socket.io
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+36 silly mapToRegistry name chokidar
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/chokidar
+40 silly mapToRegistry name mathjax
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/mathjax
+44 verbose request uri https://registry.npmjs.org/ejs
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 13:58:23
+47 verbose request id 9c5d92c6d02a78e9
+48 http request GET https://registry.npmjs.org/ejs
+49 verbose request uri https://registry.npmjs.org/ipv4
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 13:58:23
+52 http request GET https://registry.npmjs.org/ipv4
+53 verbose request uri https://registry.npmjs.org/read
+54 verbose request no auth needed
+55 info attempt registry request try #1 at 13:58:23
+56 http request GET https://registry.npmjs.org/read
+57 verbose request uri https://registry.npmjs.org/commander
+58 verbose request no auth needed
+59 info attempt registry request try #1 at 13:58:23
+60 verbose etag "30MAVVVT76UUZQQMA6866D3SE"
+61 http request GET https://registry.npmjs.org/commander
+62 verbose request uri https://registry.npmjs.org/mathjax
+63 verbose request no auth needed
+64 info attempt registry request try #1 at 13:58:23
+65 verbose etag "EZI493PVEMPP8NTKRPJTCVW6G"
+66 http request GET https://registry.npmjs.org/mathjax
+67 verbose request uri https://registry.npmjs.org/connect
+68 verbose request no auth needed
+69 info attempt registry request try #1 at 13:58:23
+70 verbose etag "DMT9CNKIB3HPGWYHF1NTQNQ7R"
+71 http request GET https://registry.npmjs.org/connect
+72 verbose request uri https://registry.npmjs.org/cookie
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 13:58:23
+75 verbose etag "62ZFG37XH8CP9C3P2IL55FE39"
+76 http request GET https://registry.npmjs.org/cookie
+77 verbose request uri https://registry.npmjs.org/chokidar
+78 verbose request no auth needed
+79 info attempt registry request try #1 at 13:58:23
+80 verbose etag "7T5ANCH8MVT7599GI87JWJA8P"
+81 http request GET https://registry.npmjs.org/chokidar
+82 verbose request uri https://registry.npmjs.org/socket.io
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 13:58:23
+85 verbose etag "79Q7PV36DVI5S7Y95L991KTSK"
+86 http request GET https://registry.npmjs.org/socket.io
+87 verbose request uri https://registry.npmjs.org/colors
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 13:58:23
+90 verbose etag "BA5ITU1U6THQUKHFOFL2J06M6"
+91 http request GET https://registry.npmjs.org/colors
+92 http 200 https://registry.npmjs.org/read
+93 silly get cb [ 200,
+93 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+93 silly get     etag: '"4NE5FAOQPK1SCERKDI38FDBM6"',
+93 silly get     'content-type': 'application/json',
+93 silly get     'cache-control': 'max-age=60',
+93 silly get     'content-length': '12126',
+93 silly get     'accept-ranges': 'bytes',
+93 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+93 silly get     via: '1.1 varnish',
+93 silly get     age: '5',
+93 silly get     connection: 'keep-alive',
+93 silly get     'x-served-by': 'cache-nrt6134-NRT',
+93 silly get     'x-cache': 'HIT',
+93 silly get     'x-cache-hits': '29',
+93 silly get     'x-timer': 'S1447739906.553035,VS0,VE0',
+93 silly get     vary: 'Accept' } ]
+94 verbose get saving read to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\read\.cache.json
+95 http 304 https://registry.npmjs.org/commander
+96 silly get cb [ 304,
+96 silly get   { date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+96 silly get     via: '1.1 varnish',
+96 silly get     'cache-control': 'max-age=60',
+96 silly get     etag: '"30MAVVVT76UUZQQMA6866D3SE"',
+96 silly get     age: '28',
+96 silly get     connection: 'keep-alive',
+96 silly get     'x-served-by': 'cache-nrt6133-NRT',
+96 silly get     'x-cache': 'HIT',
+96 silly get     'x-cache-hits': '4',
+96 silly get     'x-timer': 'S1447739906.583464,VS0,VE0',
+96 silly get     vary: 'Accept' } ]
+97 verbose etag https://registry.npmjs.org/commander from cache
+98 verbose get saving commander to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\commander\.cache.json
+99 http 304 https://registry.npmjs.org/mathjax
+100 silly get cb [ 304,
+100 silly get   { date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+100 silly get     via: '1.1 varnish',
+100 silly get     'cache-control': 'max-age=60',
+100 silly get     etag: '"EZI493PVEMPP8NTKRPJTCVW6G"',
+100 silly get     age: '0',
+100 silly get     connection: 'keep-alive',
+100 silly get     'x-served-by': 'cache-nrt6125-NRT',
+100 silly get     'x-cache': 'MISS',
+100 silly get     'x-cache-hits': '0',
+100 silly get     'x-timer': 'S1447739906.562918,VS0,VE134',
+100 silly get     vary: 'Accept' } ]
+101 verbose etag https://registry.npmjs.org/mathjax from cache
+102 verbose get saving mathjax to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\mathjax\.cache.json
+103 http 200 https://registry.npmjs.org/colors
+104 silly get cb [ 200,
+104 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+104 silly get     etag: '"AF9TRY9LLDUDCCNCJF5OXVF5V"',
+104 silly get     'content-type': 'application/json',
+104 silly get     'cache-control': 'max-age=60',
+104 silly get     'content-length': '20167',
+104 silly get     'accept-ranges': 'bytes',
+104 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+104 silly get     via: '1.1 varnish',
+104 silly get     age: '13',
+104 silly get     connection: 'keep-alive',
+104 silly get     'x-served-by': 'cache-nrt6124-NRT',
+104 silly get     'x-cache': 'HIT',
+104 silly get     'x-cache-hits': '1',
+104 silly get     'x-timer': 'S1447739906.614564,VS0,VE0',
+104 silly get     vary: 'Accept' } ]
+105 verbose get saving colors to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\colors\.cache.json
+106 http 200 https://registry.npmjs.org/cookie
+107 silly get cb [ 200,
+107 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+107 silly get     etag: '"5XRBISM4XVV9W7HS1I1XDUM6R"',
+107 silly get     'content-type': 'application/json',
+107 silly get     'cache-control': 'max-age=60',
+107 silly get     'content-length': '21754',
+107 silly get     'accept-ranges': 'bytes',
+107 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+107 silly get     via: '1.1 varnish',
+107 silly get     age: '0',
+107 silly get     connection: 'keep-alive',
+107 silly get     'x-served-by': 'cache-nrt6133-NRT',
+107 silly get     'x-cache': 'HIT',
+107 silly get     'x-cache-hits': '1',
+107 silly get     'x-timer': 'S1447739906.608505,VS0,VE184',
+107 silly get     vary: 'Accept' } ]
+108 verbose get saving cookie to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\cookie\.cache.json
+109 http 200 https://registry.npmjs.org/ejs
+110 silly get cb [ 200,
+110 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+110 silly get     etag: '"DGQR1IXGOWOP81ALXL738QOB4"',
+110 silly get     'content-type': 'application/json',
+110 silly get     'cache-control': 'max-age=60',
+110 silly get     'content-length': '50179',
+110 silly get     'accept-ranges': 'bytes',
+110 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+110 silly get     via: '1.1 varnish',
+110 silly get     age: '45',
+110 silly get     connection: 'keep-alive',
+110 silly get     'x-served-by': 'cache-nrt6129-NRT',
+110 silly get     'x-cache': 'HIT',
+110 silly get     'x-cache-hits': '10',
+110 silly get     'x-timer': 'S1447739906.549288,VS0,VE0',
+110 silly get     vary: 'Accept' } ]
+111 verbose get saving ejs to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\ejs\.cache.json
+112 http 200 https://registry.npmjs.org/socket.io
+113 silly get cb [ 200,
+113 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+113 silly get     etag: '"BDVBD1M6SVTSB4GFIYLQDTWV2"',
+113 silly get     'content-type': 'application/json',
+113 silly get     'cache-control': 'max-age=60',
+113 silly get     'content-length': '115680',
+113 silly get     'accept-ranges': 'bytes',
+113 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+113 silly get     via: '1.1 varnish',
+113 silly get     age: '36',
+113 silly get     connection: 'keep-alive',
+113 silly get     'x-served-by': 'cache-nrt6131-NRT',
+113 silly get     'x-cache': 'HIT',
+113 silly get     'x-cache-hits': '2',
+113 silly get     'x-timer': 'S1447739906.613164,VS0,VE0',
+113 silly get     vary: 'Accept' } ]
+114 verbose get saving socket.io to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\socket.io\.cache.json
+115 http 200 https://registry.npmjs.org/chokidar
+116 silly get cb [ 200,
+116 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+116 silly get     etag: '"BE3CHJ5Q87NAGQCP3E4FKG9A4"',
+116 silly get     'content-type': 'application/json',
+116 silly get     'cache-control': 'max-age=60',
+116 silly get     'content-length': '94608',
+116 silly get     'accept-ranges': 'bytes',
+116 silly get     date: 'Tue, 17 Nov 2015 05:58:26 GMT',
+116 silly get     via: '1.1 varnish',
+116 silly get     age: '43',
+116 silly get     connection: 'keep-alive',
+116 silly get     'x-served-by': 'cache-nrt6127-NRT',
+116 silly get     'x-cache': 'HIT',
+116 silly get     'x-cache-hits': '2',
+116 silly get     'x-timer': 'S1447739906.608955,VS0,VE0',
+116 silly get     vary: 'Accept' } ]
+117 verbose get saving chokidar to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\chokidar\.cache.json
+118 http 200 https://registry.npmjs.org/ipv4
+119 silly get cb [ 200,
+119 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+119 silly get     etag: '"5DC8PY33OS1XUNSLM5Y2HR02I"',
+119 silly get     'content-type': 'application/json',
+119 silly get     'cache-control': 'max-age=60',
+119 silly get     'content-length': '5454',
+119 silly get     'accept-ranges': 'bytes',
+119 silly get     date: 'Tue, 17 Nov 2015 05:58:29 GMT',
+119 silly get     via: '1.1 varnish',
+119 silly get     age: '0',
+119 silly get     connection: 'keep-alive',
+119 silly get     'x-served-by': 'cache-nrt6122-NRT',
+119 silly get     'x-cache': 'MISS',
+119 silly get     'x-cache-hits': '0',
+119 silly get     'x-timer': 'S1447739906.561309,VS0,VE3130',
+119 silly get     vary: 'Accept' } ]
+120 verbose get saving ipv4 to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\ipv4\.cache.json
+121 http 200 https://registry.npmjs.org/connect
+122 silly get cb [ 200,
+122 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+122 silly get     etag: '"5QVTWZLXSYIVVA6D9H6EY9D29"',
+122 silly get     'content-type': 'application/json',
+122 silly get     'cache-control': 'max-age=60',
+122 silly get     'content-length': '331998',
+122 silly get     'accept-ranges': 'bytes',
+122 silly get     date: 'Tue, 17 Nov 2015 05:58:27 GMT',
+122 silly get     via: '1.1 varnish',
+122 silly get     age: '5',
+122 silly get     connection: 'keep-alive',
+122 silly get     'x-served-by': 'cache-nrt6121-NRT',
+122 silly get     'x-cache': 'HIT',
+122 silly get     'x-cache-hits': '1',
+122 silly get     'x-timer': 'S1447739907.743622,VS0,VE1',
+122 silly get     vary: 'Accept' } ]
+123 verbose get saving connect to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\connect\.cache.json
+124 verbose outdated not updating ejs because it's currently at the maximum version that matches its specified semver range
+125 verbose outdated not updating socket.io because it's currently at the maximum version that matches its specified semver range
+126 verbose outdated not updating chokidar because it's currently at the maximum version that matches its specified semver range
+127 verbose outdated not updating connect because it's currently at the maximum version that matches its specified semver range
+128 info outdated updating [ [ 'E:\\WebProject\\nodePPT',
+128 info outdated     'commander',
+128 info outdated     '2.8.1',
+128 info outdated     '2.9.0',
+128 info outdated     '2.9.0',
+128 info outdated     '2.9.0' ],
+128 info outdated   [ 'E:\\WebProject\\nodePPT',
+128 info outdated     'read',
+128 info outdated     '1.0.6',
+128 info outdated     '1.0.7',
+128 info outdated     '1.0.7',
+128 info outdated     '>=1.0.4' ],
+128 info outdated   [ 'E:\\WebProject\\nodePPT',
+128 info outdated     'mathjax',
+128 info outdated     undefined,
+128 info outdated     '2.5.1',
+128 info outdated     '2.5.1',
+128 info outdated     '2.5.1' ],
+128 info outdated   [ 'E:\\WebProject\\nodePPT',
+128 info outdated     'cookie',
+128 info outdated     '0.1.3',
+128 info outdated     '0.2.3',
+128 info outdated     '0.2.3',
+128 info outdated     '>=0.1.0' ] ]
+129 verbose install where, what [ 'E:\\WebProject\\nodePPT', [ 'commander@2.9.0' ] ]
+130 verbose install where, what [ 'E:\\WebProject\\nodePPT', [ 'read@1.0.7' ] ]
+131 verbose install where, what [ 'E:\\WebProject\\nodePPT', [ 'mathjax@2.5.1' ] ]
+132 verbose install where, what [ 'E:\\WebProject\\nodePPT', [ 'cookie@0.2.3' ] ]
+133 verbose install initial load of E:\WebProject\nodePPT\package.json
+134 verbose install initial load of E:\WebProject\nodePPT\package.json
+135 verbose install initial load of E:\WebProject\nodePPT\package.json
+136 verbose install initial load of E:\WebProject\nodePPT\package.json
+137 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\chokidar\package.json
+138 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\colors\package.json
+139 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\commander\package.json
+140 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\connect\package.json
+141 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\cookie\package.json
+142 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ejs\package.json
+143 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt\package.json
+144 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-jshint\package.json
+145 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-nodeunit\package.json
+146 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-uglify\package.json
+147 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ipv4\package.json
+148 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\read\package.json
+149 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\socket.io\package.json
+150 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\chokidar\package.json
+151 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\colors\package.json
+152 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\commander\package.json
+153 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\connect\package.json
+154 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\cookie\package.json
+155 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ejs\package.json
+156 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt\package.json
+157 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-jshint\package.json
+158 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-nodeunit\package.json
+159 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-uglify\package.json
+160 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ipv4\package.json
+161 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\read\package.json
+162 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\socket.io\package.json
+163 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\chokidar\package.json
+164 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\colors\package.json
+165 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\commander\package.json
+166 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\connect\package.json
+167 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\cookie\package.json
+168 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ejs\package.json
+169 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt\package.json
+170 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-jshint\package.json
+171 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-nodeunit\package.json
+172 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-uglify\package.json
+173 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ipv4\package.json
+174 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\read\package.json
+175 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\socket.io\package.json
+176 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\chokidar\package.json
+177 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\colors\package.json
+178 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\commander\package.json
+179 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\connect\package.json
+180 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\cookie\package.json
+181 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ejs\package.json
+182 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt\package.json
+183 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-jshint\package.json
+184 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-nodeunit\package.json
+185 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\grunt-contrib-uglify\package.json
+186 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\ipv4\package.json
+187 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\read\package.json
+188 verbose installManyTop reading scoped package data from E:\WebProject\nodePPT\node_modules\socket.io\package.json
+189 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\package.json
+190 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\package.json
+191 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\package.json
+192 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\package.json
+193 silly cache add args [ 'commander@2.9.0', null ]
+194 verbose cache add spec commander@2.9.0
+195 silly cache add parsed spec { raw: 'commander@2.9.0',
+195 silly cache add   scope: null,
+195 silly cache add   name: 'commander',
+195 silly cache add   rawSpec: '2.9.0',
+195 silly cache add   spec: '2.9.0',
+195 silly cache add   type: 'version' }
+196 silly addNamed commander@2.9.0
+197 verbose addNamed "2.9.0" is a plain semver version for commander
+198 silly mapToRegistry name commander
+199 silly mapToRegistry using default registry
+200 silly mapToRegistry registry https://registry.npmjs.org/
+201 silly mapToRegistry uri https://registry.npmjs.org/commander
+202 verbose addNameVersion registry:https://registry.npmjs.org/commander not in flight; fetching
+203 silly cache add args [ 'mathjax@2.5.1', null ]
+204 verbose cache add spec mathjax@2.5.1
+205 silly cache add parsed spec { raw: 'mathjax@2.5.1',
+205 silly cache add   scope: null,
+205 silly cache add   name: 'mathjax',
+205 silly cache add   rawSpec: '2.5.1',
+205 silly cache add   spec: '2.5.1',
+205 silly cache add   type: 'version' }
+206 silly addNamed mathjax@2.5.1
+207 verbose addNamed "2.5.1" is a plain semver version for mathjax
+208 silly mapToRegistry name mathjax
+209 silly mapToRegistry using default registry
+210 silly mapToRegistry registry https://registry.npmjs.org/
+211 silly mapToRegistry uri https://registry.npmjs.org/mathjax
+212 verbose addNameVersion registry:https://registry.npmjs.org/mathjax not in flight; fetching
+213 silly cache add args [ 'read@1.0.7', null ]
+214 verbose cache add spec read@1.0.7
+215 silly cache add parsed spec { raw: 'read@1.0.7',
+215 silly cache add   scope: null,
+215 silly cache add   name: 'read',
+215 silly cache add   rawSpec: '1.0.7',
+215 silly cache add   spec: '1.0.7',
+215 silly cache add   type: 'version' }
+216 silly addNamed read@1.0.7
+217 verbose addNamed "1.0.7" is a plain semver version for read
+218 silly mapToRegistry name read
+219 silly mapToRegistry using default registry
+220 silly mapToRegistry registry https://registry.npmjs.org/
+221 silly mapToRegistry uri https://registry.npmjs.org/read
+222 verbose addNameVersion registry:https://registry.npmjs.org/read not in flight; fetching
+223 silly cache add args [ 'cookie@0.2.3', null ]
+224 verbose cache add spec cookie@0.2.3
+225 silly cache add parsed spec { raw: 'cookie@0.2.3',
+225 silly cache add   scope: null,
+225 silly cache add   name: 'cookie',
+225 silly cache add   rawSpec: '0.2.3',
+225 silly cache add   spec: '0.2.3',
+225 silly cache add   type: 'version' }
+226 silly addNamed cookie@0.2.3
+227 verbose addNamed "0.2.3" is a plain semver version for cookie
+228 silly mapToRegistry name cookie
+229 silly mapToRegistry using default registry
+230 silly mapToRegistry registry https://registry.npmjs.org/
+231 silly mapToRegistry uri https://registry.npmjs.org/cookie
+232 verbose addNameVersion registry:https://registry.npmjs.org/cookie not in flight; fetching
+233 verbose get https://registry.npmjs.org/mathjax not expired, no request
+234 verbose get https://registry.npmjs.org/read not expired, no request
+235 verbose get https://registry.npmjs.org/commander not expired, no request
+236 verbose get https://registry.npmjs.org/cookie not expired, no request
+237 silly cache afterAdd commander@2.9.0
+238 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\commander\2.9.0\package\package.json not in flight; writing
+239 silly mapToRegistry name mathjax
+240 silly mapToRegistry using default registry
+241 silly mapToRegistry registry https://registry.npmjs.org/
+242 silly mapToRegistry uri https://registry.npmjs.org/mathjax
+243 verbose addRemoteTarball https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz not in flight; adding
+244 verbose addRemoteTarball [ 'https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz',
+244 verbose addRemoteTarball   '7e9dde72faff8f7248e1d480a6971b4019a61890' ]
+245 info retry fetch attempt 1 at 13:58:34
+246 info attempt registry request try #1 at 13:58:34
+247 http fetch GET https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz
+248 silly mapToRegistry name cookie
+249 silly mapToRegistry using default registry
+250 silly mapToRegistry registry https://registry.npmjs.org/
+251 silly mapToRegistry uri https://registry.npmjs.org/cookie
+252 verbose addRemoteTarball https://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz not in flight; adding
+253 verbose addRemoteTarball [ 'https://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz',
+253 verbose addRemoteTarball   '1a59536af68537a21178a01346f87cb059d2ae5c' ]
+254 info retry fetch attempt 1 at 13:58:34
+255 info attempt registry request try #1 at 13:58:34
+256 http fetch GET https://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz
+257 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\commander\2.9.0\package\package.json written
+258 silly install resolved [ { name: 'commander',
+258 silly install resolved     version: '2.9.0',
+258 silly install resolved     description: 'the complete solution for node.js command-line programs',
+258 silly install resolved     keywords: [ 'command', 'option', 'parser' ],
+258 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+258 silly install resolved     license: 'MIT',
+258 silly install resolved     repository:
+258 silly install resolved      { type: 'git',
+258 silly install resolved        url: 'git+https://github.com/tj/commander.js.git' },
+258 silly install resolved     devDependencies: { should: '>= 0.0.1', sinon: '>=1.17.1' },
+258 silly install resolved     scripts: { test: 'make test' },
+258 silly install resolved     main: 'index',
+258 silly install resolved     engines: { node: '>= 0.6.x' },
+258 silly install resolved     files: [ 'index.js' ],
+258 silly install resolved     dependencies: { 'graceful-readlink': '>= 1.0.0' },
+258 silly install resolved     gitHead: 'b2aad7a8471d434593a85306aa73777a526e9f75',
+258 silly install resolved     bugs: { url: 'https://github.com/tj/commander.js/issues' },
+258 silly install resolved     homepage: 'https://github.com/tj/commander.js#readme',
+258 silly install resolved     _id: 'commander@2.9.0',
+258 silly install resolved     _shasum: '9c99094176e12240cb22d6c5146098400fe0f7d4',
+258 silly install resolved     _from: 'commander@2.9.0',
+258 silly install resolved     _npmVersion: '2.11.3',
+258 silly install resolved     _nodeVersion: '0.12.7',
+258 silly install resolved     _npmUser: { name: 'zhiyelee', email: 'zhiyelee@gmail.com' },
+258 silly install resolved     dist:
+258 silly install resolved      { shasum: '9c99094176e12240cb22d6c5146098400fe0f7d4',
+258 silly install resolved        tarball: 'http://registry.npmjs.org/commander/-/commander-2.9.0.tgz' },
+258 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+258 silly install resolved     directories: {},
+258 silly install resolved     _resolved: 'https://registry.npmjs.org/commander/-/commander-2.9.0.tgz',
+258 silly install resolved     readme: 'ERROR: No README data found!' } ]
+259 info install commander@2.9.0 into E:\WebProject\nodePPT
+260 info installOne commander@2.9.0
+261 verbose installOne of commander to E:\WebProject\nodePPT not in flight; installing
+262 verbose lock using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\commander-73465ad6410114e3.lock for E:\WebProject\nodePPT\node_modules\commander
+263 silly install write writing commander 2.9.0 to E:\WebProject\nodePPT\node_modules\commander
+264 verbose unbuild node_modules\commander
+265 silly cache afterAdd read@1.0.7
+266 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\read\1.0.7\package\package.json not in flight; writing
+267 info preuninstall commander@2.8.1
+268 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\read\1.0.7\package\package.json written
+269 silly install resolved [ { name: 'read',
+269 silly install resolved     version: '1.0.7',
+269 silly install resolved     main: 'lib/read.js',
+269 silly install resolved     dependencies: { 'mute-stream': '~0.0.4' },
+269 silly install resolved     devDependencies: { tap: '^1.2.0' },
+269 silly install resolved     engines: { node: '>=0.8' },
+269 silly install resolved     author:
+269 silly install resolved      { name: 'Isaac Z. Schlueter',
+269 silly install resolved        email: 'i@izs.me',
+269 silly install resolved        url: 'http://blog.izs.me/' },
+269 silly install resolved     description: 'read(1) for node programs',
+269 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/read.git' },
+269 silly install resolved     license: 'ISC',
+269 silly install resolved     scripts: { test: 'tap test/*.js' },
+269 silly install resolved     files: [ 'lib/read.js' ],
+269 silly install resolved     gitHead: 'b14516b9236c40140fd0666567f5d0c588a09a62',
+269 silly install resolved     bugs: { url: 'https://github.com/isaacs/read/issues' },
+269 silly install resolved     homepage: 'https://github.com/isaacs/read#readme',
+269 silly install resolved     _id: 'read@1.0.7',
+269 silly install resolved     _shasum: 'b3da19bd052431a97671d44a42634adf710b40c4',
+269 silly install resolved     _from: 'read@1.0.7',
+269 silly install resolved     _npmVersion: '3.2.2',
+269 silly install resolved     _nodeVersion: '2.2.1',
+269 silly install resolved     _npmUser: { name: 'isaacs', email: 'isaacs@npmjs.com' },
+269 silly install resolved     dist:
+269 silly install resolved      { shasum: 'b3da19bd052431a97671d44a42634adf710b40c4',
+269 silly install resolved        size: 2674,
+269 silly install resolved        noattachment: false,
+269 silly install resolved        tarball: 'http://registry.npm.taobao.org/read/download/read-1.0.7.tgz' },
+269 silly install resolved     maintainers: [ [Object] ],
+269 silly install resolved     directories: {},
+269 silly install resolved     publish_time: 1440622770174,
+269 silly install resolved     _cnpm_publish_time: 1440622770174,
+269 silly install resolved     _resolved: 'http://registry.npm.taobao.org/read/download/read-1.0.7.tgz',
+269 silly install resolved     readme: 'ERROR: No README data found!' } ]
+270 info install read@1.0.7 into E:\WebProject\nodePPT
+271 info installOne read@1.0.7
+272 verbose installOne of read to E:\WebProject\nodePPT not in flight; installing
+273 info uninstall commander@2.8.1
+274 verbose unbuild rmStuff commander@2.8.1 from E:\WebProject\nodePPT\node_modules
+275 info postuninstall commander@2.8.1
+276 silly gentlyRm E:\WebProject\nodePPT\node_modules\commander is being purged from base E:\WebProject\nodePPT
+277 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\commander
+278 silly vacuum-fs purging E:\WebProject\nodePPT\node_modules\commander
+279 verbose lock using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\read-a1bb91426ddecedc.lock for E:\WebProject\nodePPT\node_modules\read
+280 silly install write writing read 1.0.7 to E:\WebProject\nodePPT\node_modules\read
+281 verbose unbuild node_modules\read
+282 info preuninstall read@1.0.6
+283 info uninstall read@1.0.6
+284 verbose unbuild rmStuff read@1.0.6 from E:\WebProject\nodePPT\node_modules
+285 info postuninstall read@1.0.6
+286 silly vacuum-fs quitting because other entries in E:\WebProject\nodePPT\node_modules
+287 verbose tar unpack C:\Users\Shafley\AppData\Roaming\npm-cache\commander\2.9.0\package.tgz
+288 verbose tar unpacking to E:\WebProject\nodePPT\node_modules\commander
+289 silly gentlyRm E:\WebProject\nodePPT\node_modules\commander is being purged
+290 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\commander
+291 silly gunzTarPerm modes [ '777', '666' ]
+292 silly gentlyRm E:\WebProject\nodePPT\node_modules\read is being purged from base E:\WebProject\nodePPT
+293 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\read
+294 silly vacuum-fs purging E:\WebProject\nodePPT\node_modules\read
+295 silly gunzTarPerm extractEntry package.json
+296 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+297 silly gunzTarPerm extractEntry LICENSE
+298 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+299 silly gunzTarPerm extractEntry index.js
+300 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+301 silly gunzTarPerm extractEntry Readme.md
+302 silly gunzTarPerm modified mode [ 'Readme.md', 420, 438 ]
+303 silly vacuum-fs quitting because other entries in E:\WebProject\nodePPT\node_modules
+304 verbose tar unpack C:\Users\Shafley\AppData\Roaming\npm-cache\read\1.0.7\package.tgz
+305 verbose tar unpacking to E:\WebProject\nodePPT\node_modules\read
+306 silly gentlyRm E:\WebProject\nodePPT\node_modules\read is being purged
+307 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\read
+308 silly gunzTarPerm modes [ '777', '666' ]
+309 silly gunzTarPerm extractEntry History.md
+310 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+311 verbose write writing to E:\WebProject\nodePPT\node_modules\commander\package.json
+312 silly gunzTarPerm extractEntry package.json
+313 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+314 info preinstall commander@2.9.0
+315 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\commander\package.json
+316 silly gunzTarPerm extractEntry README.md
+317 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+318 silly gunzTarPerm extractEntry LICENSE
+319 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+320 silly prepareForInstallMany adding graceful-readlink@>= 1.0.0 from commander dependencies
+321 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\commander\package.json
+322 silly cache add args [ 'graceful-readlink@>= 1.0.0', null ]
+323 verbose cache add spec graceful-readlink@>= 1.0.0
+324 silly cache add parsed spec { raw: 'graceful-readlink@>= 1.0.0',
+324 silly cache add   scope: null,
+324 silly cache add   name: 'graceful-readlink',
+324 silly cache add   rawSpec: '>= 1.0.0',
+324 silly cache add   spec: '>=1.0.0',
+324 silly cache add   type: 'range' }
+325 silly addNamed graceful-readlink@>=1.0.0
+326 verbose addNamed ">=1.0.0" is a valid semver range for graceful-readlink
+327 silly addNameRange { name: 'graceful-readlink', range: '>=1.0.0', hasData: false }
+328 silly mapToRegistry name graceful-readlink
+329 silly mapToRegistry using default registry
+330 silly mapToRegistry registry https://registry.npmjs.org/
+331 silly mapToRegistry uri https://registry.npmjs.org/graceful-readlink
+332 verbose addNameRange registry:https://registry.npmjs.org/graceful-readlink not in flight; fetching
+333 silly gunzTarPerm extractEntry lib/read.js
+334 silly gunzTarPerm modified mode [ 'lib/read.js', 420, 438 ]
+335 verbose write writing to E:\WebProject\nodePPT\node_modules\read\package.json
+336 info preinstall read@1.0.7
+337 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\read\package.json
+338 silly prepareForInstallMany adding mute-stream@~0.0.4 from read dependencies
+339 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\read\package.json
+340 silly cache add args [ 'mute-stream@~0.0.4', null ]
+341 verbose cache add spec mute-stream@~0.0.4
+342 silly cache add parsed spec { raw: 'mute-stream@~0.0.4',
+342 silly cache add   scope: null,
+342 silly cache add   name: 'mute-stream',
+342 silly cache add   rawSpec: '~0.0.4',
+342 silly cache add   spec: '>=0.0.4 <0.1.0',
+342 silly cache add   type: 'range' }
+343 silly addNamed mute-stream@>=0.0.4 <0.1.0
+344 verbose addNamed ">=0.0.4 <0.1.0" is a valid semver range for mute-stream
+345 silly addNameRange { name: 'mute-stream', range: '>=0.0.4 <0.1.0', hasData: false }
+346 silly mapToRegistry name mute-stream
+347 silly mapToRegistry using default registry
+348 silly mapToRegistry registry https://registry.npmjs.org/
+349 silly mapToRegistry uri https://registry.npmjs.org/mute-stream
+350 verbose addNameRange registry:https://registry.npmjs.org/mute-stream not in flight; fetching
+351 verbose request uri https://registry.npmjs.org/mute-stream
+352 verbose request no auth needed
+353 info attempt registry request try #1 at 13:58:34
+354 http request GET https://registry.npmjs.org/mute-stream
+355 verbose request uri https://registry.npmjs.org/graceful-readlink
+356 verbose request no auth needed
+357 info attempt registry request try #1 at 13:58:34
+358 verbose etag "54BPOELEHDUPND7Q6GUE15GT"
+359 http request GET https://registry.npmjs.org/graceful-readlink
+360 http fetch 200 https://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz
+361 http fetch 200 https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz
+362 silly fetchAndShaCheck shasum 1a59536af68537a21178a01346f87cb059d2ae5c
+363 verbose addTmpTarball C:\Users\Shafley\AppData\Local\Temp\npm-10880-af861c24\registry.npmjs.org\cookie\-\cookie-0.2.3.tgz not in flight; adding
+364 verbose addTmpTarball already have metadata; skipping unpack for cookie@0.2.3
+365 silly cache afterAdd cookie@0.2.3
+366 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\cookie\0.2.3\package\package.json not in flight; writing
+367 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\cookie\0.2.3\package\package.json written
+368 silly install resolved [ { name: 'cookie',
+368 silly install resolved     description: 'cookie parsing and serialization',
+368 silly install resolved     version: '0.2.3',
+368 silly install resolved     author: { name: 'Roman Shtylman', email: 'shtylman@gmail.com' },
+368 silly install resolved     contributors: [ [Object] ],
+368 silly install resolved     license: 'MIT',
+368 silly install resolved     keywords: [ 'cookie', 'cookies' ],
+368 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshttp/cookie' },
+368 silly install resolved     devDependencies: { istanbul: '0.3.22', mocha: '1.21.5' },
+368 silly install resolved     files: [ 'HISTORY.md', 'LICENSE', 'README.md', 'index.js' ],
+368 silly install resolved     engines: { node: '>= 0.6' },
+368 silly install resolved     scripts:
+368 silly install resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+368 silly install resolved        'test-ci': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/',
+368 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/' },
+368 silly install resolved     gitHead: '35326af88e9665bb8ea1be280cb827523e9360a7',
+368 silly install resolved     bugs: { url: 'https://github.com/jshttp/cookie/issues' },
+368 silly install resolved     homepage: 'https://github.com/jshttp/cookie',
+368 silly install resolved     _id: 'cookie@0.2.3',
+368 silly install resolved     _shasum: '1a59536af68537a21178a01346f87cb059d2ae5c',
+368 silly install resolved     _from: 'cookie@0.2.3',
+368 silly install resolved     _npmVersion: '1.4.28',
+368 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+368 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+368 silly install resolved     dist:
+368 silly install resolved      { shasum: '1a59536af68537a21178a01346f87cb059d2ae5c',
+368 silly install resolved        tarball: 'http://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz' },
+368 silly install resolved     directories: {},
+368 silly install resolved     _resolved: 'https://registry.npmjs.org/cookie/-/cookie-0.2.3.tgz' } ]
+369 info install cookie@0.2.3 into E:\WebProject\nodePPT
+370 info installOne cookie@0.2.3
+371 verbose installOne of cookie to E:\WebProject\nodePPT not in flight; installing
+372 verbose lock using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\cookie-0f3419fe12a1e8c1.lock for E:\WebProject\nodePPT\node_modules\cookie
+373 silly install write writing cookie 0.2.3 to E:\WebProject\nodePPT\node_modules\cookie
+374 verbose unbuild node_modules\cookie
+375 info preuninstall cookie@0.1.3
+376 info uninstall cookie@0.1.3
+377 verbose unbuild rmStuff cookie@0.1.3 from E:\WebProject\nodePPT\node_modules
+378 info postuninstall cookie@0.1.3
+379 silly gentlyRm E:\WebProject\nodePPT\node_modules\cookie is being purged from base E:\WebProject\nodePPT
+380 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\cookie
+381 silly vacuum-fs purging E:\WebProject\nodePPT\node_modules\cookie
+382 silly vacuum-fs quitting because other entries in E:\WebProject\nodePPT\node_modules
+383 verbose tar unpack C:\Users\Shafley\AppData\Roaming\npm-cache\cookie\0.2.3\package.tgz
+384 verbose tar unpacking to E:\WebProject\nodePPT\node_modules\cookie
+385 silly gentlyRm E:\WebProject\nodePPT\node_modules\cookie is being purged
+386 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\cookie
+387 silly gunzTarPerm modes [ '777', '666' ]
+388 silly gunzTarPerm extractEntry package.json
+389 silly gunzTarPerm extractEntry README.md
+390 silly gunzTarPerm extractEntry LICENSE
+391 silly gunzTarPerm extractEntry index.js
+392 silly gunzTarPerm extractEntry HISTORY.md
+393 verbose write writing to E:\WebProject\nodePPT\node_modules\cookie\package.json
+394 info preinstall cookie@0.2.3
+395 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\cookie\package.json
+396 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\cookie\package.json
+397 silly install resolved []
+398 verbose about to build E:\WebProject\nodePPT\node_modules\cookie
+399 info build E:\WebProject\nodePPT\node_modules\cookie
+400 info linkStuff cookie@0.2.3
+401 silly linkStuff cookie@0.2.3 has E:\WebProject\nodePPT\node_modules as its parent node_modules
+402 verbose linkBins cookie@0.2.3
+403 verbose linkMans cookie@0.2.3
+404 verbose rebuildBundles cookie@0.2.3
+405 info install cookie@0.2.3
+406 info postinstall cookie@0.2.3
+407 verbose unlock done using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\cookie-0f3419fe12a1e8c1.lock for E:\WebProject\nodePPT\node_modules\cookie
+408 verbose validateInstall loading E:\WebProject\nodePPT\package.json for validation
+409 http 200 https://registry.npmjs.org/mute-stream
+410 silly get cb [ 200,
+410 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+410 silly get     etag: '"9MR20F1A94PJOGCIECBR44CP4"',
+410 silly get     'content-type': 'application/json',
+410 silly get     'cache-control': 'max-age=60',
+410 silly get     'content-length': '6495',
+410 silly get     'accept-ranges': 'bytes',
+410 silly get     date: 'Tue, 17 Nov 2015 05:58:37 GMT',
+410 silly get     via: '1.1 varnish',
+410 silly get     age: '29',
+410 silly get     connection: 'keep-alive',
+410 silly get     'x-served-by': 'cache-nrt6133-NRT',
+410 silly get     'x-cache': 'HIT',
+410 silly get     'x-cache-hits': '1',
+410 silly get     'x-timer': 'S1447739917.651365,VS0,VE0',
+410 silly get     vary: 'Accept' } ]
+411 verbose get saving mute-stream to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\mute-stream\.cache.json
+412 silly addNameRange number 2 { name: 'mute-stream', range: '>=0.0.4 <0.1.0', hasData: true }
+413 silly addNameRange versions [ 'mute-stream',
+413 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5' ] ]
+414 silly addNamed mute-stream@0.0.5
+415 verbose addNamed "0.0.5" is a plain semver version for mute-stream
+416 silly cache afterAdd mute-stream@0.0.5
+417 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\mute-stream\0.0.5\package\package.json not in flight; writing
+418 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\mute-stream\0.0.5\package\package.json written
+419 silly install resolved [ { name: 'mute-stream',
+419 silly install resolved     version: '0.0.5',
+419 silly install resolved     main: 'mute.js',
+419 silly install resolved     directories: { test: 'test' },
+419 silly install resolved     devDependencies: { tap: '~0.2.5' },
+419 silly install resolved     scripts: { test: 'tap test/*.js' },
+419 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/mute-stream.git' },
+419 silly install resolved     keywords: [ 'mute', 'stream', 'pipe' ],
+419 silly install resolved     author:
+419 silly install resolved      { name: 'Isaac Z. Schlueter',
+419 silly install resolved        email: 'i@izs.me',
+419 silly install resolved        url: 'http://blog.izs.me/' },
+419 silly install resolved     license: 'ISC',
+419 silly install resolved     description: 'Bytes go in, but they don\'t come out (when muted).',
+419 silly install resolved     gitHead: '17d9854a315f56088d039534f87b740e470a9af0',
+419 silly install resolved     bugs: { url: 'https://github.com/isaacs/mute-stream/issues' },
+419 silly install resolved     homepage: 'https://github.com/isaacs/mute-stream#readme',
+419 silly install resolved     _id: 'mute-stream@0.0.5',
+419 silly install resolved     _shasum: '8fbfabb0a98a253d3184331f9e8deb7372fac6c0',
+419 silly install resolved     _from: 'mute-stream@>=0.0.4 <0.1.0',
+419 silly install resolved     _npmVersion: '2.10.0',
+419 silly install resolved     _nodeVersion: '2.0.1',
+419 silly install resolved     _npmUser: { name: 'isaacs', email: 'isaacs@npmjs.com' },
+419 silly install resolved     dist:
+419 silly install resolved      { shasum: '8fbfabb0a98a253d3184331f9e8deb7372fac6c0',
+419 silly install resolved        size: 3415,
+419 silly install resolved        noattachment: false,
+419 silly install resolved        tarball: 'http://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.5.tgz' },
+419 silly install resolved     maintainers: [ [Object] ],
+419 silly install resolved     publish_time: 1432105916592,
+419 silly install resolved     _cnpm_publish_time: 1432105916592,
+419 silly install resolved     _resolved: 'http://registry.npm.taobao.org/mute-stream/download/mute-stream-0.0.5.tgz',
+419 silly install resolved     readme: 'ERROR: No README data found!' } ]
+420 info install mute-stream@0.0.5 into E:\WebProject\nodePPT\node_modules\read
+421 info installOne mute-stream@0.0.5
+422 verbose installOne of mute-stream to E:\WebProject\nodePPT\node_modules\read not in flight; installing
+423 verbose lock using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\mute-stream-5aaba8dbd43f52ee.lock for E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+424 silly install write writing mute-stream 0.0.5 to E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+425 verbose unbuild node_modules\read\node_modules\mute-stream
+426 silly gentlyRm E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream is being purged from base E:\WebProject\nodePPT
+427 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+428 verbose tar unpack C:\Users\Shafley\AppData\Roaming\npm-cache\mute-stream\0.0.5\package.tgz
+429 verbose tar unpacking to E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+430 silly gentlyRm E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream is being purged
+431 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+432 silly gunzTarPerm modes [ '777', '666' ]
+433 silly gunzTarPerm extractEntry package.json
+434 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+435 silly gunzTarPerm extractEntry README.md
+436 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+437 silly gunzTarPerm extractEntry LICENSE
+438 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+439 silly gunzTarPerm extractEntry mute.js
+440 silly gunzTarPerm modified mode [ 'mute.js', 420, 438 ]
+441 silly gunzTarPerm extractEntry test/basic.js
+442 silly gunzTarPerm modified mode [ 'test/basic.js', 420, 438 ]
+443 verbose write writing to E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream\package.json
+444 info preinstall mute-stream@0.0.5
+445 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream\package.json
+446 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream\package.json
+447 silly install resolved []
+448 verbose about to build E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+449 info build E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+450 info linkStuff mute-stream@0.0.5
+451 silly linkStuff mute-stream@0.0.5 has E:\WebProject\nodePPT\node_modules\read\node_modules as its parent node_modules
+452 verbose linkBins mute-stream@0.0.5
+453 verbose linkMans mute-stream@0.0.5
+454 verbose rebuildBundles mute-stream@0.0.5
+455 info install mute-stream@0.0.5
+456 info postinstall mute-stream@0.0.5
+457 verbose unlock done using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\mute-stream-5aaba8dbd43f52ee.lock for E:\WebProject\nodePPT\node_modules\read\node_modules\mute-stream
+458 verbose about to build E:\WebProject\nodePPT\node_modules\read
+459 info build E:\WebProject\nodePPT\node_modules\read
+460 info linkStuff read@1.0.7
+461 silly linkStuff read@1.0.7 has E:\WebProject\nodePPT\node_modules as its parent node_modules
+462 verbose linkBins read@1.0.7
+463 verbose linkMans read@1.0.7
+464 verbose rebuildBundles read@1.0.7
+465 verbose rebuildBundles [ 'mute-stream' ]
+466 info install read@1.0.7
+467 info postinstall read@1.0.7
+468 verbose unlock done using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\read-a1bb91426ddecedc.lock for E:\WebProject\nodePPT\node_modules\read
+469 verbose validateInstall loading E:\WebProject\nodePPT\package.json for validation
+470 http 304 https://registry.npmjs.org/graceful-readlink
+471 silly get cb [ 304,
+471 silly get   { date: 'Tue, 17 Nov 2015 05:58:39 GMT',
+471 silly get     via: '1.1 varnish',
+471 silly get     'cache-control': 'max-age=60',
+471 silly get     etag: '"54BPOELEHDUPND7Q6GUE15GT"',
+471 silly get     age: '58',
+471 silly get     connection: 'keep-alive',
+471 silly get     'x-served-by': 'cache-nrt6124-NRT',
+471 silly get     'x-cache': 'HIT',
+471 silly get     'x-cache-hits': '163',
+471 silly get     'x-timer': 'S1447739919.025940,VS0,VE0',
+471 silly get     vary: 'Accept' } ]
+472 verbose etag https://registry.npmjs.org/graceful-readlink from cache
+473 verbose get saving graceful-readlink to C:\Users\Shafley\AppData\Roaming\npm-cache\registry.npmjs.org\graceful-readlink\.cache.json
+474 silly addNameRange number 2 { name: 'graceful-readlink', range: '>=1.0.0', hasData: true }
+475 silly addNameRange versions [ 'graceful-readlink', [ '1.0.0', '1.0.1' ] ]
+476 silly addNamed graceful-readlink@1.0.1
+477 verbose addNamed "1.0.1" is a plain semver version for graceful-readlink
+478 silly cache afterAdd graceful-readlink@1.0.1
+479 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\graceful-readlink\1.0.1\package\package.json not in flight; writing
+480 verbose afterAdd C:\Users\Shafley\AppData\Roaming\npm-cache\graceful-readlink\1.0.1\package\package.json written
+481 silly install resolved [ { name: 'graceful-readlink',
+481 silly install resolved     version: '1.0.1',
+481 silly install resolved     description: 'graceful fs.readlink',
+481 silly install resolved     main: 'index.js',
+481 silly install resolved     repository:
+481 silly install resolved      { type: 'git',
+481 silly install resolved        url: 'git://github.com/zhiyelee/graceful-readlink.git' },
+481 silly install resolved     homepage: 'https://github.com/zhiyelee/graceful-readlink',
+481 silly install resolved     bugs: { url: 'https://github.com/zhiyelee/graceful-readlink/issues' },
+481 silly install resolved     keywords: [ 'fs.readlink', 'readlink' ],
+481 silly install resolved     author: { name: 'zhiyelee' },
+481 silly install resolved     license: 'MIT',
+481 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+481 silly install resolved     gitHead: 'f6655275bebef706fb63fd01b5f062a7052419a5',
+481 silly install resolved     _id: 'graceful-readlink@1.0.1',
+481 silly install resolved     _shasum: '4cafad76bc62f02fa039b2f94e9a3dd3a391a725',
+481 silly install resolved     _from: 'graceful-readlink@>=1.0.0',
+481 silly install resolved     _npmVersion: '2.1.17',
+481 silly install resolved     _nodeVersion: '0.11.14',
+481 silly install resolved     _npmUser: { name: 'zhiyelee', email: 'zhiyelee@gmail.com' },
+481 silly install resolved     maintainers: [ [Object] ],
+481 silly install resolved     dist:
+481 silly install resolved      { shasum: '4cafad76bc62f02fa039b2f94e9a3dd3a391a725',
+481 silly install resolved        tarball: 'http://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz' },
+481 silly install resolved     directories: {},
+481 silly install resolved     _resolved: 'https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz',
+481 silly install resolved     readme: 'ERROR: No README data found!' } ]
+482 info install graceful-readlink@1.0.1 into E:\WebProject\nodePPT\node_modules\commander
+483 info installOne graceful-readlink@1.0.1
+484 verbose installOne of graceful-readlink to E:\WebProject\nodePPT\node_modules\commander not in flight; installing
+485 verbose lock using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\graceful-readlink-4ba7ea7f6b06b600.lock for E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+486 silly install write writing graceful-readlink 1.0.1 to E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+487 verbose unbuild node_modules\commander\node_modules\graceful-readlink
+488 silly gentlyRm E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink is being purged from base E:\WebProject\nodePPT
+489 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+490 verbose tar unpack C:\Users\Shafley\AppData\Roaming\npm-cache\graceful-readlink\1.0.1\package.tgz
+491 verbose tar unpacking to E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+492 silly gentlyRm E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink is being purged
+493 verbose gentlyRm don't care about contents; nuking E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+494 silly gunzTarPerm modes [ '777', '666' ]
+495 silly gunzTarPerm extractEntry package.json
+496 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+497 silly gunzTarPerm extractEntry .npmignore
+498 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+499 silly gunzTarPerm extractEntry README.md
+500 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+501 silly gunzTarPerm extractEntry LICENSE
+502 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+503 silly gunzTarPerm extractEntry index.js
+504 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+505 silly gunzTarPerm extractEntry .travis.yml
+506 silly gunzTarPerm modified mode [ '.travis.yml', 436, 438 ]
+507 verbose write writing to E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink\package.json
+508 info preinstall graceful-readlink@1.0.1
+509 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink\package.json
+510 verbose readDependencies loading dependencies from E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink\package.json
+511 silly install resolved []
+512 verbose about to build E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+513 info build E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+514 info linkStuff graceful-readlink@1.0.1
+515 silly linkStuff graceful-readlink@1.0.1 has E:\WebProject\nodePPT\node_modules\commander\node_modules as its parent node_modules
+516 verbose linkBins graceful-readlink@1.0.1
+517 verbose linkMans graceful-readlink@1.0.1
+518 verbose rebuildBundles graceful-readlink@1.0.1
+519 info install graceful-readlink@1.0.1
+520 info postinstall graceful-readlink@1.0.1
+521 verbose unlock done using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\graceful-readlink-4ba7ea7f6b06b600.lock for E:\WebProject\nodePPT\node_modules\commander\node_modules\graceful-readlink
+522 verbose about to build E:\WebProject\nodePPT\node_modules\commander
+523 info build E:\WebProject\nodePPT\node_modules\commander
+524 info linkStuff commander@2.9.0
+525 silly linkStuff commander@2.9.0 has E:\WebProject\nodePPT\node_modules as its parent node_modules
+526 verbose linkBins commander@2.9.0
+527 verbose linkMans commander@2.9.0
+528 verbose rebuildBundles commander@2.9.0
+529 verbose rebuildBundles [ 'graceful-readlink' ]
+530 info install commander@2.9.0
+531 info postinstall commander@2.9.0
+532 verbose unlock done using C:\Users\Shafley\AppData\Roaming\npm-cache\_locks\commander-73465ad6410114e3.lock for E:\WebProject\nodePPT\node_modules\commander
+533 verbose validateInstall loading E:\WebProject\nodePPT\package.json for validation
+534 silly fetchAndShaCheck shasum 7e9dde72faff8f7248e1d480a6971b4019a61890
+535 verbose stack Error: shasum check failed for C:\Users\Shafley\AppData\Local\Temp\npm-10880-af861c24\registry.npmjs.org\mathjax\-\mathjax-2.5.1.tgz
+535 verbose stack Expected: 7e9dde72faff8f7248e1d480a6971b4019a61890
+535 verbose stack Actual:   99bc261df6241fc0415d25c547bbe6d51b7ce56e
+535 verbose stack From:     https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz
+535 verbose stack     at E:\Program Files\node\node_modules\npm\node_modules\sha\index.js:38:8
+535 verbose stack     at ReadStream.<anonymous> (E:\Program Files\node\node_modules\npm\node_modules\sha\index.js:85:7)
+535 verbose stack     at ReadStream.emit (events.js:129:20)
+535 verbose stack     at _stream_readable.js:908:16
+535 verbose stack     at process._tickCallback (node.js:355:11)
+536 verbose cwd E:\WebProject\nodePPT\bin
+537 error Windows_NT 6.3.9600
+538 error argv "E:\\Program Files\\node\\node.exe" "E:\\Program Files\\node\\node_modules\\npm\\bin\\npm-cli.js" "update"
+539 error node v0.12.7
+540 error npm  v2.11.3
+541 error shasum check failed for C:\Users\Shafley\AppData\Local\Temp\npm-10880-af861c24\registry.npmjs.org\mathjax\-\mathjax-2.5.1.tgz
+541 error Expected: 7e9dde72faff8f7248e1d480a6971b4019a61890
+541 error Actual:   99bc261df6241fc0415d25c547bbe6d51b7ce56e
+541 error From:     https://registry.npmjs.org/mathjax/-/mathjax-2.5.1.tgz
+542 error If you need help, you may report this error at:
+542 error     <https://github.com/npm/npm/issues>
+543 verbose exit [ 1, true ]
